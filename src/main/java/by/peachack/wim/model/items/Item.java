@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 @DiscriminatorColumn(name = "item_type", discriminatorType = DiscriminatorType.STRING)
+@Table(name = "items")
 public class Item {
     @Id
     private String Id;
