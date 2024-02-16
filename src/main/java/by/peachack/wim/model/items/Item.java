@@ -2,10 +2,11 @@ package by.peachack.wim.model.items;
 
 import by.peachack.wim.model.enums.ItemType;
 import jakarta.persistence.*;
+import org.hibernate.annotations.ColumnTransformer;
+import org.hibernate.annotations.Type;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
-@DiscriminatorColumn(name = "item_type", discriminatorType = DiscriminatorType.STRING)
 @Table(name = "items")
 public class Item {
     @Id
@@ -16,6 +17,7 @@ public class Item {
     private String urlName;
     @Column(name = "trading_tax")
     private int tradingTax;
+    @Enumerated(EnumType.STRING)
     @Column(name = "item_type")
     private ItemType type;
 
