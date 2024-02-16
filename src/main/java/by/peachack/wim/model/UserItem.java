@@ -10,11 +10,11 @@ public class UserItem {
     UserItemKey id;
 
     @ManyToOne
-    @MapsId("user_id")
+    @MapsId("userId")
     @JoinColumn(name = "user_id")
     private User user;
     @ManyToOne
-    @MapsId("item_id")
+    @MapsId("itemId")
     @JoinColumn(name = "item_id")
     private Item item;
     @Column(name = "quantity")

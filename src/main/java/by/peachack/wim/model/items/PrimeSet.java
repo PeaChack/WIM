@@ -5,10 +5,8 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-@Inheritance(strategy =InheritanceType.SINGLE_TABLE)
-@DiscriminatorValue("PRIME_SET")
 public class PrimeSet extends Item {
-    @OneToMany
+    @OneToMany(mappedBy = "setItem")
     private List<PrimePart> primePartList;
     @Transient
     private int ducatsPrice;
