@@ -10,7 +10,7 @@ import java.util.List;
 
 @Service
 public class UserService {
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
 
     @Autowired
     public UserService(UserRepository userRepository) {
@@ -28,9 +28,5 @@ public class UserService {
     }
     public void deleteUser(User user){
         userRepository.delete(user);
-    }
-
-    public List<UserItem> getInventoryById(Long id){
-        return userRepository.findById(id).orElseThrow().getInventory();
     }
 }
