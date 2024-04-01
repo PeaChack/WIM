@@ -1,18 +1,17 @@
-package by.peachack.wim.model;
+package by.peachack.wim.model.inventory;
 
-import by.peachack.wim.model.items.Item;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "user_items")
-public class UserItem {
+@Table(name = "inventory_items")
+public class InventoryItem {
     @EmbeddedId
-    UserItemKey id;
+    InventoryItemKey id;
 
     @ManyToOne
-    @MapsId("userId")
-    @JoinColumn(name = "user_id")
-    private User user;
+    @MapsId("inventoryId")
+    @JoinColumn(name = "inventory_id")
+    private Inventory inventory;
     @ManyToOne
     @MapsId("itemId")
     @JoinColumn(name = "item_id")

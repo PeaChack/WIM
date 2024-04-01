@@ -1,19 +1,21 @@
-package by.peachack.wim.model.items;
+package by.peachack.wim.model.inventory;
 
-import by.peachack.wim.model.enums.ItemType;
 import jakarta.persistence.*;
-import org.hibernate.annotations.ColumnTransformer;
-import org.hibernate.annotations.Type;
+import lombok.Getter;
+
+import java.util.UUID;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 @Table(name = "items")
+@Getter
 public class Item {
     @Id
-    private String Id;
-    @Column(name = "name")
+    @Column(name = "id")
+    private UUID Id;
+    @Column(name = "name", unique = true)
     private String name;
-    @Column(name = "url_name")
+    @Column(name = "url_name", unique = true)
     private String urlName;
     @Column(name = "trading_tax")
     private int tradingTax;

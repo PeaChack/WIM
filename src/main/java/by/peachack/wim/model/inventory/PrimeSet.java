@@ -1,10 +1,10 @@
-package by.peachack.wim.model.items;
+package by.peachack.wim.model.inventory;
 
 import jakarta.persistence.*;
 
 import java.util.List;
 
-@Entity
+@Entity(name = "prime_sets")
 public class PrimeSet extends Item {
     @OneToMany(mappedBy = "setItem")
     private List<PrimePart> primePartList;

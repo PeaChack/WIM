@@ -1,4 +1,4 @@
-package by.peachack.wim.model.enums;
+package by.peachack.wim.model.inventory;
 
 public enum ItemType {
     PRIME_PART,
