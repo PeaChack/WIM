@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -27,12 +28,14 @@ public class Item {
     @Enumerated(EnumType.STRING)
     @Column(name = "item_type")
     private ItemType type;
-
-    public Item(String name, String urlName, int tradingTax, ItemType type) {
+    @ElementCollection
+    private List<String> tags;
+    public Item(String name, String urlName, int tradingTax, ItemType type, List<String> tags) {
         this.name = name;
         this.urlName = urlName;
         this.tradingTax = tradingTax;
         this.type = type;
+        this.tags = tags;
     }
     public Item(Item item){
         this.id = item.id;

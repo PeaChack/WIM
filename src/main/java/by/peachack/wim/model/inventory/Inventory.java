@@ -28,13 +28,13 @@ public class Inventory {
     private int platinumBalance = 0;
     @Column(name = "ducats_balance")
     private int ducatsBalance = 0;
-    @OneToMany(mappedBy = "inventory")
-    private List<InventoryItem> inventory;
+    @OneToMany(mappedBy = "inventory", cascade = CascadeType.ALL)
+    private List<InventoryItem> items;
 
     public Inventory(User owner, int platinum, int ducats) {
         this.user = owner;
         this.platinumBalance = platinum;
         this.ducatsBalance = ducats;
-        this.inventory = new ArrayList<>();
+        this.items = new ArrayList<>();
     }
 }
