@@ -34,7 +34,6 @@ public class Optimizer {
         Map<PrimeSet, Float> greedyMetrics = new HashMap<>();
         Map<PrimeSet, Float> mediumMetrics = new HashMap<>();
         Map<PrimeSet, Float> generousMetrics = new HashMap<>();
-        LinkedList
         expandedPrimeSets.forEach(primeSet -> {
             int setCompositeSellerPrice = prices.get(primeSet).getSellerPrice();
             int setCompositeBuyerPrice = prices.get(primeSet).getSellerPrice();
