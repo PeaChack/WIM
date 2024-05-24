@@ -1,7 +1,10 @@
 package by.peachack.wim.repositories;
 
-import by.peachack.wim.model.items.PrimePart;
+import by.peachack.wim.model.inventory.PrimePart;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface PrimePartRepository extends JpaRepository<PrimePart, String> {
+import java.util.UUID;
+@Repository
+public interface PrimePartRepository extends JpaRepository<PrimePart, UUID> {
 }
