@@ -26,7 +26,7 @@ public class SecurityConfig extends SecurityConfigurerAdapter<DefaultSecurityFil
                             .hasAuthority("ADMIN")
                             .anyRequest().authenticated();
                 })
-                .formLogin(Customizer.withDefaults())
+//                .formLogin(Customizer.withDefaults())
                 .build();
     }
 

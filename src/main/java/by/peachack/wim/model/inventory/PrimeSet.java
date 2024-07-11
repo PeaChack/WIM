@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.util.List;
 
 @EqualsAndHashCode(callSuper = true)
@@ -13,7 +14,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class PrimeSet extends Item {
+public class PrimeSet extends Item implements Serializable {
     @OneToMany(mappedBy = "setItem", cascade = CascadeType.ALL)
     private List<PrimePart> primePartList;
     @Transient

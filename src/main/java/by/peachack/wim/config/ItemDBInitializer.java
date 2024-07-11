@@ -1,8 +1,8 @@
 package by.peachack.wim.config;
 
 import by.peachack.wim.model.inventory.Item;
-import by.peachack.wim.services.inventory.ItemLoader;
-import by.peachack.wim.services.inventory.ItemService;
+import by.peachack.wim.service.inventory.ItemLoader;
+import by.peachack.wim.service.inventory.ItemService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;

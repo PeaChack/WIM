@@ -3,6 +3,8 @@ package by.peachack.wim.model.inventory;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.io.Serializable;
+
 
 @Entity
 @Table(name = "prime_parts")
@@ -10,7 +12,7 @@ import lombok.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class PrimePart extends Item {
+public class PrimePart extends Item implements Serializable {
     @ManyToOne
     @JoinColumn(name = "set_id")
     private PrimeSet setItem;

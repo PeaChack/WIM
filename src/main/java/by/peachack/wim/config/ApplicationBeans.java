@@ -1,9 +1,9 @@
 package by.peachack.wim.config;
 
 import by.peachack.wim.dto.mappers.*;
-import by.peachack.wim.services.inventory.FileSystemJsonItemLoader;
-import by.peachack.wim.services.market.RestClientWMRestClient;
-import by.peachack.wim.services.market.WMRestClient;
+import by.peachack.wim.util.json.FileSystemJsonItemLoader;
+import by.peachack.wim.service.market.RestClientWMRestClient;
+import by.peachack.wim.service.market.WMRestClient;
 import by.peachack.wim.util.json.JsonItemParser;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

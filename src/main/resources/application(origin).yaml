@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    username: # your username
+    password: # your password
+    driver-class-name: # org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: # org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update # auto update entities to db
+app:
+  default-user-role: # user role that will be added to all new users
+  warframe-market-base-uri: # uri of warframe.market API (https://api.warframe.market/v1)
+  path-to-item-jsons: # a path to JSON files with item descriptions that will be used for populating the database on the first run

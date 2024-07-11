@@ -9,6 +9,7 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.hibernate.annotations.UpdateTimestamp;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 import java.time.Instant;
 import java.util.UUID;
@@ -20,7 +21,7 @@ import java.util.UUID;
 @Entity(name = "item_prices")
 @RequiredArgsConstructor
 @AllArgsConstructor
-public class ItemPrice {
+public class ItemPrice implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
