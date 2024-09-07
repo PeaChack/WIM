@@ -11,8 +11,12 @@
     <groupId>by.peachack</groupId>
     <artifactId>WIM</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
     <name>WIM</name>
     <description>WIM</description>
+    <modules>
+        <module>auth-service</module>
+    </modules>
     <properties>
         <java.version>17</java.version>
     </properties>
