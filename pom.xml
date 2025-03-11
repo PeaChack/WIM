@@ -11,11 +11,18 @@
     <groupId>by.peachack</groupId>
     <artifactId>WIM</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>pom</packaging>
     <name>WIM</name>
     <description>WIM</description>
+    <packaging>pom</packaging>
     <modules>
         <module>auth-service</module>
+        <module>config</module>
+        <module>gateway</module>
+        <module>eureka-server</module>
+        <module>inventory-service</module>
+        <module>user-service</module>
+        <module>market-service</module>
+        <module>recommendation-service</module>
     </modules>
     <properties>
         <java.version>17</java.version>
@@ -47,12 +54,6 @@
             <artifactId>mapstruct</artifactId>
             <version>1.5.5.Final</version>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-docker-compose</artifactId>-->
-<!--            <scope>runtime</scope>-->
-<!--            <optional>true</optional>-->
-<!--        </dependency>-->
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
